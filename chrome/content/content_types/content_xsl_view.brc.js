@@ -74,7 +74,7 @@ function content_xsl_view(params) {
 	 */	
 	
 	this.read_from_file = function(restore_ext) {
-		br_log.server("READ FROM FILE: xsl view");
+		br_log.firebug("READ FROM FILE: xsl view");
 		restore_ext = restore_ext || "";
 		var dir = me.get_temp_directory();
 		var file_value = br_editor.readFile(dir.path, me.get_filename() + restore_ext + me.get_extension());
@@ -129,7 +129,7 @@ function content_xsl_view(params) {
 	 * @param url {String} Contains the URL of the where to find the content
 	 */
 	this.restore = function(url) {
-		br_log.server("RESTORE: stylesheet");
+		br_log.firebug("RESTORE: stylesheet");
 		var restore_ext = ".restore";
 		if(url) {
 			jQuery.get(url, null, function(data) {

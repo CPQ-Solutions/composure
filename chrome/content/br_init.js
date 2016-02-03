@@ -477,35 +477,3 @@ br_init.init_plugins = function () {
 
 	return list;
 };
-
-// Check for availability of internal Oracle service to set on or off network. Disabled by mcampbell
-/*br_init.on_network = function () {
-	var api_url = "";
-	if(br_global.debug){
-		api_url = "https://apex.oraclecorp.com/pls/apex/matthewpetrik/on_network";
-	}else{
-		api_url = "https://apex.oraclecorp.com/pls/apex/cpq_sangfroid/on_network";
-	}
-	jQuery.ajax({
-		type:"GET",
-		url:api_url,
-		dataType:"application/x-www-form-urlencoded",
-		success:function(){br_global.on_network = true;},
-		error:function(){br_global.on_network = false;br_log.firebug("Off Network");},
-		async:false
-	});
-};*/
-
-// Get current list of production sites from internal support server. Disabled by mcampbell
-/*br_init.get_prod_list = function() {
-	//pull prod list from apex
-	var api_url = "https://apex.oraclecorp.com/pls/apex/bigmachines_cloud_support/active_sites";
-	br_global.prod_sites = [];
-	jQuery.getJSON(api_url,function (data) {
-		jQuery(data["items"]).each(function(key,val){
-			br_global.prod_sites.push(val["site_url"]);
-		});
-		br_global.pm.setCharPref("prod_sites",br_global.prod_sites.join("@"));
-		console.log(br_global.prod_sites);
-	});
-};*/

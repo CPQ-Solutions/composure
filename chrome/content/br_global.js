@@ -25,7 +25,7 @@ br_global.br_log;
 br_global.log_prefix = "Sangfroid: ";
 br_global.debug = false;
 br_global.plugin_array = br_global.plugin_array || [];
-br_global.on_network = false;
+br_global.on_network = true;
 br_global.prod_sites = [];
 br_global.pm;
 

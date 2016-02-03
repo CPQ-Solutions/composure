@@ -223,7 +223,7 @@
 			$upload.closest("tr").after("<tr><td colspan='2'><a href='#' id='sangfroid_add_file'><img src='resource://br_images/logo.png'/>Create New File with Sangfroid</a></td></td>");
 
 			jQuery("#sangfroid_add_file",doc).click(function(){
-				br_log.server("FILEMANAGER CREATE FILE");
+				br_log.firebug("FILEMANAGER CREATE FILE");
 				var first_checkbox = jQuery("input[type='checkbox']:first",doc);
 				new_filename=prompt("Please enter filename, including extension.");
 
@@ -329,7 +329,7 @@
 
 		
 		this.restore = function(url) {
-			br_log.server("RESTORE: file manager");
+			br_log.firebug("RESTORE: file manager");
 			if(url) {
 				if(!confirm("File Manager Files Do Not Support Auto-Revert.\n\nClick Okay to Copy to Clipboard.")) {
 					return;

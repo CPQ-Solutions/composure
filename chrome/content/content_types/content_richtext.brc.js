@@ -99,7 +99,7 @@ function content_richtext(params) {
 			// since this often won't be fired when set by js
 			//send_event_to_page(node, "change");
 
-			br_log.server("DEFAULT_READ_FROM_FILE: "+ this.get_script_type());
+			br_log.firebug("DEFAULT_READ_FROM_FILE: "+ this.get_script_type());
 			br_display.show_success_effect(node);
 			this.pub("read-complete");
 		} else {

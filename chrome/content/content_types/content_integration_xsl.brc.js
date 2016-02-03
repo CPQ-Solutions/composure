@@ -86,7 +86,7 @@ function content_integration_xsl(params) {
 	 */
 
 	this.read_from_file = function (restore_ext) {
-		br_log.server("READ FROM FILE: integration xsls");
+		br_log.firebug("READ FROM FILE: integration xsls");
 		restore_ext = restore_ext || "";
 
 		var dir = this.get_temp_directory().path;
@@ -106,7 +106,7 @@ function content_integration_xsl(params) {
 	};
 
 	this.restore = function (url) {
-		br_log.server("RESTORE: integration xsls");
+		br_log.firebug("RESTORE: integration xsls");
 		var restore_ext = ".restore";
 		if (url) {
 			jQuery.get(url, null, function (data) {

@@ -188,7 +188,7 @@ function BR_Content() {};
 	brc.open_temp_file = function () {
 		var me = this;
 
-		br_log.server("DEFAULT_OPEN_TEMP_FILE: " + me.get_script_type());
+		br_log.firebug("DEFAULT_OPEN_TEMP_FILE: " + me.get_script_type());
 		me.with_script(function (my_script) {
 			var file_location = me.get_temp_directory();
 			br_editor.saveFileToDisk(file_location.path, me.get_filename() + me.get_extension(), my_script);
@@ -240,7 +240,7 @@ function BR_Content() {};
 				var str = "Reverted to Version Number: " + data.revert_to_version;
 				str += "<br/> From Site: " + data.root_url;
 
-				br_log.server("DEFAULT_RESTORE: " + me.get_script_type());
+				br_log.firebug("DEFAULT_RESTORE: " + me.get_script_type());
 
 				br_display.displayMessage(str);
 				br_display.show_success_effect(node);
@@ -289,7 +289,7 @@ function BR_Content() {};
 			// since this often won't be fired when set by js
 			send_event_to_page(node, "change");
 
-			br_log.server("DEFAULT_READ_FROM_FILE: " + this.get_script_type());
+			br_log.firebug("DEFAULT_READ_FROM_FILE: " + this.get_script_type());
 			br_display.show_success_effect(node);
 			this.pub("read-complete");
 		} else {
@@ -303,7 +303,7 @@ function BR_Content() {};
 	brc.save_and_sync = function(callback, auto) {
 	var me = this;
 
-	//br_log.server("DEFAULT_OPEN_TEMP_FILE: "+ me.get_script_type());
+	//br_log.firebug("DEFAULT_OPEN_TEMP_FILE: "+ me.get_script_type());
 	me.with_script(function(my_script) {
 	var file_location = me.get_temp_directory();
 	br_editor.saveFileToDisk( file_location.path, me.get_filename() + me.get_extension(), my_script );
@@ -318,7 +318,7 @@ function BR_Content() {};
 	var repo = this.get_repo(), me = this;
 	callback = callback || function() { me.pub("sync-starting"); };
 	repo.prompt_and_sync(callback, auto);
-	br_log.server("DEFAULT_SAVE_AND_SYNC: "+ this.get_script_type());
+	br_log.firebug("DEFAULT_SAVE_AND_SYNC: "+ this.get_script_type());
 	};
 	 */
 	//AH - save_and_sync testing
@@ -531,7 +531,7 @@ function BR_Content() {};
 	brc.view_revisions = function() {
 	// pass in a reference to this plugin so that overlay knows what to load
 	br_rails_overlay.show(this);
-	br_log.server("DEFAULT_VIEW_REVISIONS: "+ this.get_script_type());
+	br_log.firebug("DEFAULT_VIEW_REVISIONS: "+ this.get_script_type());
 	};
 	 */
 

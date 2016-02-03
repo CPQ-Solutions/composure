@@ -176,7 +176,7 @@
 
 
 		this.read_from_file = function(restore_ext) {
-			br_log.server("READ FROM FILE: homepage_xsl_admin");
+			br_log.firebug("READ FROM FILE: homepage_xsl_admin");
 
 			restore_ext = restore_ext || "";
 			var dir = me.get_temp_directory();
@@ -195,7 +195,7 @@
 
 
 		this.restore = function(url) {
-			br_log.server("RESTORE: stylesheet");
+			br_log.firebug("RESTORE: stylesheet");
 			var restore_ext = ".restore";
 			if(url) {
 				jQuery.get(url, null, function(data) {

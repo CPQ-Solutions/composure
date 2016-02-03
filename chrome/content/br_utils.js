@@ -615,7 +615,6 @@ br_utils.is_bmi_site = function(){
 	var this_html = jQuery("HTML",doc).html();
 	if(this_html.length === 0) return;
 	return this_html.indexOf("/bmfsweb/") > -1;
-	//return jQuery("HTML",doc).html().indexOf("/bmfsweb/") > -1;
 };
 
 //centralized prod check

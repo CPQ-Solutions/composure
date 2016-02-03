@@ -101,7 +101,7 @@
 		}
 
 		this.read_from_file = function(restore_ext) {
-			br_log.server("READ FROM FILE: stylesheet");
+			br_log.firebug("READ FROM FILE: stylesheet");
 			// don't do anything for the main css file
 			var which = jQuery("#br_css_select",doc).children(":selected").html();
 			if(which === "Main") {
@@ -125,7 +125,7 @@
 		};
 
 		this.restore = function(url) {
-			br_log.server("RESTORE: stylesheet");
+			br_log.firebug("RESTORE: stylesheet");
 			var restore_ext = ".restore";
 			if(url) {
 				jQuery.get(url, null, function(data) {

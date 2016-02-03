@@ -255,8 +255,6 @@ function br_hotbox(options, doc, $) {
   function log(item) {
     if(!item.description) {return;}
 	
-	//AH - this was logging to firefox.bigmachines
-    //br_log.server("HOTBOXCOMMAND:"+item.description);
 	br_log.firebug("HOTBOXCOMMAND:"+item.description);
   }
 

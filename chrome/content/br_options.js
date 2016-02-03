@@ -478,11 +478,6 @@ var br_options = {
 		var desc = jQuery("#br_bug_desc").val();
 		desc = type + ": " + desc;
 		var api_url = "";
-		if(br_global.debug){
-			api_url = "https://apex.oraclecorp.com/pls/apex/matthewpetrik/sangfroid_bugs";
-		}else{
-			api_url = "https://apex.oraclecorp.com/pls/apex/cpq_sangfroid/sangfroid_bugs";
-		}
 		var params = {username:user_name,description:desc,foundVersion:br_global.sangfroid_version};
 		jQuery.ajax({
 			type:"POST",
