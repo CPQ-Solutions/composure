@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf:#$X6Kqq"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="12.0"
+                   em:maxVersion="31.5.3" />
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="sangfroid@cpqsolutions.com"
+                   em:type="2"
+                   em:name="Sangfroid - Development Branch"
+                   em:version="0.1.3"
+                   em:description="n. - composure or coolness, sometimes excessive; as shown under trying circumstances."
+                   em:unpack="true"
+                   em:optionsURL="chrome://sangfroid/content/sangfroid_options.xul"
+                   em:updateURL=""
+                   em:updateKey="">
+    <em:creator>Anonymous</em:creator>
+    <em:targetApplication RDF:resource="rdf:#$X6Kqq"/>
+  </RDF:Description>
+</RDF:RDF>

@@ -1,0 +1,28 @@
+<img src="resource://br_images/logo.png">
+<%= title %>
+<table id="sangfroidIntegrationLinks">
+	<tbody>
+<tr colspan="2">
+</tr>
+	<tr>
+	<td valign="top" class="sangfroid_column">
+	<b>Unselected Integration Links:</b>
+	<% for(var i = 0, ii = unselected.length; i<ii; i++) { %>
+		<br>
+		<a class="sangfroid_link" href="/admin/commerce/integration/edit_integration.jsp?process_id=<%= process_id %>&amp;id=<%= unselected[i].id %>">
+			<%= unselected[i].name %>
+		</a>
+	<% } %>
+	</td>
+	<td valign="top" class="sangfroid_column">
+	<b>Selected Integration Links:</b>
+	<% for(var i = 0, ii = selected.length; i<ii; i++) { %>
+		<br>
+		<a class="sangfroid_link" href="/admin/commerce/integration/edit_integration.jsp?process_id=<%= process_id %>&amp;id=<%= selected[i].id %>">
+			<%= selected[i].name %>
+		</a>
+	<% } %>
+	</td>
+	</tr>
+</tbody>
+</table>

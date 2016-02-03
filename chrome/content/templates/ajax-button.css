@@ -1,0 +1,7 @@
+#br-ajax-button {
+	width: 150px;
+}
+#br-ajax-button .br-icon {
+	padding-left: 22px;
+	background: url(resource://br_images/logo.png) no-repeat;
+}

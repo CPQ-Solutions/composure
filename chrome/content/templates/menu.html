@@ -1,0 +1,29 @@
+<div id="br_menu_div" >
+	<img src="chrome://sangfroid/content/img/logo.png" id="br_menu_logo">
+	<div id="br_button_div" >
+		<% for (var i = 0, ii = widget.length; i<ii; i++) { %>
+
+			<% if (widget[i].type === "button") { %>
+				<div class="br_button br_clrfix" id="<%= widget[i].id %>" >
+					<div class="short">
+						<img src="<%= widget[i].icon %>" class="br_button_icon" title="<%= widget[i].label %>" >
+						<span class="br_button_short_label" ><%= widget[i].short_label %></span>
+					</div>
+					<div class="br_button_label" ><%= widget[i].label %></div>
+				</div>		
+
+			<% } else if (widget[i].type === "separator") { %>
+				<div id="<%= widget[i].id %>" class="br_separator"><%= widget[i].label %></div>
+
+			<% } else if (widget[i].type === "dropdown") { %>
+				<select id="<%= widget[i].id %>" class="br_dropdown">
+					<% for(var j = 0, jj = widget[i].values.length; j<jj; j++) { %>
+						<option value="<%= widget[i].values[j].value %>"><%= widget[i].values[j].label %></option>
+					<% } %>
+				</select>
+			<% } %>
+
+		<% } %>
+		<div id="br_expand_icon"/>
+	</div>
+</div>

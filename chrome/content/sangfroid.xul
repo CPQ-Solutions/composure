@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://sangfroid/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://sangfroid/locale/overlay.dtd">
+<overlay id="sangfroid-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="br_init.js"/>
+	
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="sangfroid-strings" src="chrome://sangfroid/locale/overlay.properties"/>
+	</stringbundleset>
+	
+	
+	<hbox id="appcontent">
+		<splitter id="sangfroid_splitter" resizeafter="closest" collapse="after"><grippy/></splitter>
+		<vbox id="sangfroid_overlay" class="sangfroid_overlay" log="">
+			<hbox id="rails_header" flex="1">
+				<hbox id="rails_left" flex="1">
+					<toolbox id="rails_toolbox" flex="1">
+						<toolbar id="rails_toolbar">
+							<toolbarbutton id="rails_back" label="Back"/>
+							<toolbarbutton id="rails_forward" label="Forward"/>
+							<toolbarbutton id="rails_logo" label="" disabled="true" />
+							<textbox id="rails_field" readonly="true" value="" flex="1" />
+							<spacer flex="1"/>
+							<toolbarbutton class="rails_close" id="rails_close" label="Close"/>
+						</toolbar>
+					</toolbox>
+				</hbox>
+			</hbox>
+			<stack id="rails_div">
+				<browser id="rails_iframe" scrolling="no" type="content" src="" flex="1"/> 
+			</stack>
+		</vbox>
+	</hbox>
+	
+	
+	<toolbar id="nav-bar">
+		<toolbarbutton class="toolbarbutton-1 chromeclass-toolbar" type="menu-button" removable="true" id="sangfroid_nav_button" accesskey="C" contextmenu="sangfroid_nav_dropdown" label="Sangfroid"> 
+			<menupopup id="sangfroid_nav_dropdown">
+				<!-- AH inconsistent display, should only be inside pref window 
+	  <menuitem id="sangfroid_faster" label="Always Convert Links"
+				tooltiptext="For Commerce Quicklinks"
+				accesskey="C"
+				type="checkbox"
+				autocheck="false"/>
+		-->
+		<!-- AH deprecating plugin customization
+			<menuitem id="sangfroid_context_menu" label="Refresh Plugins" accesskey="R"/>
+		-->
+	  <menuitem id="sangfroid_open_prefs" label="Open Preferences" accesskey="P"/>
+	  <!-- mcampbell removing unsupported menu item
+		<menuitem id="sangfroid_open_bug" label="Bugs And Enhancements" accesskey="B"/>
+	-->
+	  <menuitem oncommand="window.open('https://mosemp.us.oracle.com/epmos/faces/DocContentDisplay?id=1995482.2');" label="Help" accesskey="H"/>
+	  <!--<menuitem id="sangfroid_open_plugins" label="Custom Plugins" accesskey="C"/>-->
+  </menupopup>
+	</toolbarbutton>
+</toolbar>
+
+<hbox id="sangfroid_loaded"></hbox>
+
+<popupset id="mainPopupSet">
+	<panel id="hotbox-panel-transparent"
+		context="contentAreaContextMenu">
+		<div id="hotbox-panel"
+			xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+			<div id="hotbox-frame">
+			</div>
+		</div>
+	</panel>
+	<panel id="option-panel-transparent"
+		context="contentAreaContextMenu">
+		<div id="br-option-panel"
+			xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+			<div id="br-option-frame">
+				
+			</div>
+		</div>
+	</panel>
+</popupset>
+
+
+<statusbar id="status-bar">
+	<!-- 
+	  <statusbarpanel id="br_sangfroid_status" label="" popup="hotbox-panel-transparent" tooltiptext="Sangfroid Plugins" /> 
+	-->
+	<statusbarpanel id="br_sangfroid_status" tooltiptext="Sangfroid Plugins">
+		<image id='sangfroid_logo_box' class='sangfroid_logo_box' src="chrome://sangfroid/content/img/logo.png" />
+	</statusbarpanel>
+</statusbar>
+
+
+</overlay>

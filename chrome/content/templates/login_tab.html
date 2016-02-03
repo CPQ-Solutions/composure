@@ -1,0 +1,14 @@
+<div id="br_login_tab" style="display: block">
+	<div id="br_inner_login">
+		<div class="br_access br_bm <%=bm_granted ? 'br_granted' : ''%>">
+			<div class="br_bm_image" title="CPQ Cloud Login Status"></div>
+		</div>
+		<div class="br_lock br_access <%=lock_granted ? 'br_granted' : ''%>">
+			<div class="br_lock_image"></div>
+		</div>
+		<div class="br_access br_comp <%=comp_granted ? 'br_granted' : ''%>">
+			<div class="br_logo_image"></div>
+		</div>
+		<a href="<%= url %>" class="br_login_tab_link <%=comp_granted ? 'br_granted' : ''%>" target="#">&lt;-- Log in to Sangfroid</a>
+	</div>
+</div>

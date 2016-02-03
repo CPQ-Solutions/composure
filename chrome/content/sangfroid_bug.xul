@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://sangfroid/skin/overlay.css" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://sangfroid/locale/options.dtd">
+<prefwindow id="sangfroid-preferences" 
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+  title="Bugs And Enhancements">
+	<prefpane>
+		<vbox>
+			<columns>
+				<column flex="1"/>
+				<column flex="1"/>
+			</columns>
+			<rows>
+				<row>
+					<label value="Your Email (if we have questions):"/>
+				</row>
+				<row>
+					<textbox id="br_bug_name" maxlength='35' value="" style="width:22em;"/>
+				</row>
+				<row>
+					<radiogroup id="br_bug_type">
+						<radio id="radio_bug" label="Bug" accesskey="B"  selected="true"/>
+						<radio id="radio_enhancement" label="Enhancement"  accesskey="E"/>
+					</radiogroup>
+				</row>
+				<row>
+					<label value="Complaint:"/>
+				</row>
+				<row>
+					<textbox id="br_bug_desc" multiline='true' value="" style="width:30em;height:19em;"/>
+				</row>
+				<row>
+					<button label="Accept" dlgtype="accept" oncommand="br_options.send_bug()" style="display:none;" id="accept"/>
+					<button label="Fix it!" oncommand="if(canSubmit()){jQuery('#accept').click()}" style="width: 13em;"/>
+					<button label="Nevermind, it's great." dlgtype="cancel"  style="width: 13em;"/>
+				</row>
+			</rows>
+		</vbox>
+	</prefpane>
+	<script>
+		function canSubmit() {
+			var user_name = jQuery("#br_bug_name").val();
+			var desc = jQuery("#br_bug_desc").val();
+			var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+			if(re.test(user_name)){
+				if(desc != ""){
+					return true;
+				}else{
+					alert("Please describe your issue");
+					return false;
+				}
+			}else{
+				alert("Please input a valid email");
+				return false;
+			}
+		}
+	</script>
+	<script src="br_md5_lib.js"/>
+	<script src="br_utils.js"/>
+	<script src="br_init.js"/>
+	<script src="br_repo.js"/>
+	<script src="br_display.js"/>
+	<script src="modules/br_pubsub.js"/>
+	<script src="br_editor.js"/>
+	<script src="br_content.js"/>
+	<script src="ff-overlay.js"/>
+	<script src="hg_commands.js"/>
+
+	<script src="br_globals.js"/>
+	<script src="underscore-1.1.4.min.js"/>
+	<script src="br_list_of_plugins.js"/>
+	<script src="jquery-1.4.2.js"/>
+	<script src="br_options.js"/>
+	<script>br_options.window_ready();</script>
+</prefwindow>

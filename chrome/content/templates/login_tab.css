@@ -1,0 +1,95 @@
+#br_login_tab {
+	position: fixed;
+	border: 1px solid #093161;
+	border-top: 0px;
+	top:0px;
+	left: 33%;
+	-moz-border-radius-bottomleft: 7px; 
+	-moz-border-radius-bottomright: 7px; 
+	background: #ddd;
+	font-family: Trebuchet MS, sans-serif;
+	/*background: -moz-linear-gradient(left, #f88, #fff);*/
+}
+
+.br_access {
+	float: left;
+	padding: 5px;
+}
+
+.br_bm {
+	background: -moz-linear-gradient(left, #f88, #fff);
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-bottomleft: 7px;
+}
+.br_bm_image {
+	-moz-transition: all .5s ease-out;
+	width: 16px;
+	height: 16px;
+	background:url(resource://br_images/favicon.ico) no-repeat center;
+}
+.br_logo_image {
+	-moz-transition: all .5s ease-out;
+	width: 16px;
+	height: 16px;
+	background:url(resource://br_images/logo.gif) no-repeat center;
+}
+.br_lock_image {
+	-moz-transition: all .5s ease-out;
+	width: 16px;
+	height: 16px;
+	background:url(resource://br_images/181.png) no-repeat center;
+}
+.br_lock {
+	padding: 5px 0px;
+	-moz-transition: all .5s ease-out;
+	background-color: #000;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-bottomright: 7px;
+	width: 16px;
+	height: 16px;
+}
+.br_comp {
+	background: -moz-linear-gradient(right, #f88, #fff);
+	-moz-border-radius-topright: 7px;
+	-moz-border-radius-bottomright: 7px;
+}
+
+.br_granted.br_bm {
+	background: -moz-linear-gradient(left, #8f8, #fff);
+}
+
+.br_granted.br_comp {
+	background: -moz-linear-gradient(right, #8f8, #fff);
+}
+
+.br_granted.br_lock {
+	background-color: #fff;
+	-moz-border-radius: 0px;
+}
+.br_granted.br_lock .br_lock_image {
+	background: url(resource://br_images/182.png) no-repeat center;
+}
+
+#br_login_tab #br_inner_login {
+	margin: 0px;
+	text-align: center;
+}
+
+#br_login_tab #br_inner_login .br_login_head{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+#br_login_tab #br_inner_login .br_login_head p {
+	margin: 0px;
+	font-size: 10pt;
+}
+
+#br_login_tab #br_inner_login .br_login_tab_link.br_granted {
+	display:none;
+}
+#br_login_tab #br_inner_login .br_login_tab_link {
+	color: #093161;
+	font-size:8pt;
+	text-decoration: underline;
+}

@@ -1,0 +1,66 @@
+<div id="sangfroid_helper">
+	<!-- <div width="100%" align="left" colspan="2" class="form-header"><img class="comp_img" src="resource://br_images/logo.png">Sangfroid Attribute Loader</div>-->
+	<style type="text/css">
+		#sangfroid_helper {
+			float: left;
+			width: auto;
+		}
+		div.form-header{
+			border: 1px solid;
+		}
+		.comp_img{
+			height:12px;
+			width:12px;
+		}
+		#menuEntry{
+			float: left;
+			width: auto;
+		}
+		.comp_attr_loader{
+			float:left;
+		}
+	</style>
+	<div class="comp_attr_loader">
+		<br/>
+		<TEXTAREA NAME="attributes" ROWS=15 COLS=25></TEXTAREA>
+		<br/>
+		<table cellspacing="0" cellpadding="0" class="plain-button com_attr_send"style="cursor: pointer;">
+			<tbody>
+				<tr>
+					<td class="button-left"><img src="/img/button10.gif" class="button-left"></td>
+					<td nowrap="true" class="button-middle"><div style="margin: 0px 0px 1px;"><a href="#" id="add_values" name="add_values" class="button-text">Add Values</a></div></td>		<td class="button-right"><img src="/img/button10.gif" class="button-right"></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			Is the Displayed Text the same as the Variable Name?
+			<br/><input name="tType" type="radio" value=1 checked>
+			<b>Yes</b>
+			<input name="tType" type="radio" value=2>
+			<b>No</b>
+		</p>
+	</div>
+	<div class="comp_attr_loader">
+		<p>
+			<strong>Examples for data entry:</strong>
+			<br/>If <b>Yes:</b> Displayed Text
+			<br/><b>Entry:</b>
+			<br/>Alabama<br/>Texas<br/>California
+			<br/><b>Results:</b>
+			<br/>Alabama [Alabama]
+			<br/>Texas [Texas]
+			<br/>California [California]
+			<br/>
+			<br/>If <b>No:</b> Displayed Text,Variable Name
+			<br/><b>Entry:</b>
+			<br/>Alabama,alabamausa
+			<br/>Texas,texasusa
+			<br/>California,californiausa
+			<br/><b>Results:</b>
+			<br/>Alabama [alabamausa]
+			<br/>Texas [texasusa]
+			<br/>California [californiausa]
+			<br/>
+		</p>
+	</div>
+</div>

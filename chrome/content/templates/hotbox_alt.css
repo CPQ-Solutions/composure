@@ -1,0 +1,268 @@
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+/*html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}*/
+
+
+/* Added Cleafix */
+
+.clear{ clear:both; display:block; overflow:hidden; visibility:hidden; width:0; height:0; font-size: 0; }
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+.small {
+	font-size: .7em;
+	line-height: .7em;
+	text-decoration: none;
+}
+
+#cont {
+Xposition:absolute;
+background:#c06;
+Xtop:50px;
+margin-top:100px;
+border:1px solid #c06;
+}
+
+.hotbox-iframe-div {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+#br-hotbox-iframe {
+	border-style: none;
+	width: 100%;
+	height: 95%;
+	overflow: visible;
+}
+
+#colmn {
+background:#c06;
+float:left;
+width:553px;
+padding:20px;
+}
+
+#colcon {
+background:#c06;
+float:right;
+width:327px;
+padding:20px;
+}
+
+#ftr {
+background:#333;
+clear:both;
+padding:20px;
+}
+
+#darken {  
+position:fixed;  
+top:0;  
+left:0;  
+width:100%;  
+height:100%;  
+z-index:40000;  
+background: #cc0066;  
+opacity:.8;  
+filter:alpha(opacity=70); /* Transparency in IE */  
+text-align: center;
+padding-top: 170px;
+color: #fff;
+}  
+
+html {
+/*background: url(../img/bg.jpg) repeat;*/
+}
+
+#hotbox_wrapper {
+color: #ff00ff;
+font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+font-size: 13px;
+line-height:17px;
+width: 962px;
+margin: auto;
+opacity:1;
+display:block;
+}
+
+.hotbox_link {
+	border: 0px;
+}
+img {
+	border: 0px;
+}
+.hotbox_keycode {
+font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	font-size: 30px; 
+	color:	#a6ba00;
+	line-height: 15px; 
+	margin-bottom: 30px; 
+	margin-top:10px;
+	padding-top: 25px;
+}
+.hotbox_desc {
+font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	width: 150px; 
+	height: 25px; 
+	line-height: 25px; 
+	font-size: 14px; 
+	text-decoration: none;
+}
+.hotbox-header {
+	text-align: center;
+}
+
+.hotbox-shift {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	float: right;
+	width: 25%;
+	text-align: left;
+}
+.hotbox-ctrl {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	float: right;
+	width: 25%;
+	text-align: right;
+}
+.hotbox-arrows {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	float: right;
+	text-align: center;
+}
+.br-exit {
+	margin-left: 20px;
+}
+.hotbox-curr {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	float: left;
+	width: 60%;
+	text-align: left;
+}
+h2.hotbox-curr { 
+color: #ff00ff;
+font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+font-size: 20px; 
+line-height: 15px; 
+margin-bottom: 20px; 
+margin-top:0px;
+}
+#hotbox_wrapper a {
+/*color:#a6ba00;*/
+color: #ff00ff;
+}
+
+#hotbox_wrapper p { 
+padding-bottom:10px;
+padding-top:10px;
+}
+
+#hotbox_wrapper h1 { 
+font-family: Georgia,serif;
+font-size: 30px; 
+font-style:italic;
+color:	#a6ba00;
+line-height: 15px; 
+margin-bottom: 30px; 
+margin-top:0px;
+}
+
+
+.centered-panel {
+position: absolute;
+top:10px;
+width: auto;
+left: 50%;
+height: 575px;
+margin-left: -375px;
+}
+
+.hotbox-panel-big {
+	width: 95%;
+	margin: 0px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 200%;
+}
+.hotbox-panel {
+padding: 10px 25px;
+color:#c06;
+background: #c06;
+border: 4px solid #ff33cc;
+z-index: 40001;
+}
+
+#hotbox_wrapper p { 
+font-family: Georgia,serif;
+font-size: 12px; 
+font-style:italic;
+color:	#a6ba00;
+line-height: 15px; 
+margin-bottom: 30px; 
+margin-top:10px;
+}
+.hotbox-panel a {
+	color:#c06;
+}
+
+#hotbox-panel-1 {
+	display:block;
+}
+#hotbox-panel-2 {
+	display:none;
+}
+#hotbox-panel-3 {
+	display:none;	
+}
+.hotbox-row { clear: both; margin: 15px 0 0 0; padding: 0 0 15px 0; border-bottom: #c06 solid 1px; display: block;  }
+
+.hotbox-link { 
+	font-family: Georgia,serif;
+	width: 150px; 
+	height: 150px; 
+	border: #630 solid 1px;  
+	display: block; 
+	background: #ff00ff; 
+	float: left; 
+	margin-right: 25px;
+	color: #fff; 
+	text-align: center;
+	text-decoration: none;
+}
+
+.hotbox-link a {
+	color:#fff;
+}
+.hotbox-link:hover { 
+  background-image: url(chrome://sangfroid/content/img/rainbow-swirl-wallpaper.jpg); 
+}
+
+.hotbox-link img { border: none; }
+.hotbox-link span { width: 150px; height: 25px; line-height: 25px; font-size: 14px; text-decoration: none; }
+
+.last { margin-right: 0; }
+
+.last-row { border-width: 0; margin-bottom: 0; }
+
+
+
+/* Tree
+------------------------------------------------------------------- 
+#processTree { 
+	font-size: 12px;
+        line-height: 22 px;
+}
+
+#processTree li { margin-left: 15px; }
+
+#processTree a {
+	color: #fff;
+	margin-top: 15px;
+}
+*/

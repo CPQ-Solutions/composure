@@ -1,0 +1,14 @@
+<div id='br_notify_div'>
+	<div id='br_show_more_log'>&nbsp;</div>
+	<div id='br_close_log_div'><img src='chrome://sangfroid/content/img/exit.png'/></div>
+	<div id='br_log_contents'>
+	<div id='br_current_notify_div'>
+		<p class="br_entry <%= curr.level %>"><%= curr.text %></p>
+	</div>
+		<div id='br_previous_notify_div'>
+			<% prev.forEach(function(val, idx, all) { %>
+				<p class="br_entry <%= val.level %>"><%= val.text %></p>
+			<% }); %>
+		</div>
+	</div>
+</div>

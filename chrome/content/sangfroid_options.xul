@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://sangfroid/skin/overlay.css" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://sangfroid/locale/options.dtd">
+<prefwindow id="sangfroid-preferences" 
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+  title="Sangfroid Preferences">
+	<prefpane id="sangfroid-pane" label="Options">
+		<preferences>
+			<preference id="pref_br_active" name="extensions.sangfroid.active" type="bool"/>
+			<preference id="pref_br_temp_dir" name="extensions.sangfroid.temp_dir" type="string"/>
+			<preference id="pref_br_text_editor" name="extensions.sangfroid.text_editor" type="string"/>
+			<preference id="pref_br_remote_repo" name="extensions.sangfroid.remote_repo" type="string"/>
+			<preference id="pref_br_username" name="extensions.sangfroid.username" type="string"/>
+			<preference id="pref_br_password" name="extensions.sangfroid.password" type="string"/>
+			<preference id="pref_br_faster" name="extensions.sangfroid.faster" type="bool"/>
+			<preference id="pref_br_default_plugins_flag" name="extensions.sangfroid.default_plugins" type="bool"/>
+			<preference id="pref_br_plugin_dir" name="extensions.sangfroid.plugin_dir" type="string"/>
+			<preference id="pref_br_list_of_plugins" name="extensions.sangfroid.list_of_plugins" type="string"/>
+			<preference id="pref_br_init_cgi_path" name="extensions.sangfroid.init_cgi_path" type="string"/>
+			<preference id="pref_br_hotbox_modifier" name="extensions.sangfroid.hotbox_modifier" type="string"/>
+			<!--MX for Attributes and Actions gear-->
+			<preference id="pref_br_open_attribute" name="extensions.sangfroid.open_attribute" type="bool"/>
+			<preference id="pref_br_open_action" name="extensions.sangfroid.open_action" type="string"/>
+			<!-- AH open history pref -->
+			<preference id="pref_br_open_history_editor" name="extensions.sangfroid.open_history_editor" type="bool"/>
+			<preference id="pref_br_open_document_editor" name="extensions.sangfroid.open_document_editor" type="bool"/>
+			<!-- AH Theme colors -->
+			<preference id="pref_br_theme_color_main1" name="extensions.sangfroid.color_main1" type="string"/>
+			<preference id="pref_br_theme_color_main2" name="extensions.sangfroid.color_main2" type="string"/>
+			<preference id="pref_br_theme_color_text1" name="extensions.sangfroid.color_text1" type="string"/>
+			<preference id="pref_br_theme_color_text2" name="extensions.sangfroid.color_text2" type="string"/>
+			<preference id="pref_br_theme_color_text3" name="extensions.sangfroid.color_text3" type="string"/>
+			<preference id="pref_br_theme_color_hotbox1" name="extensions.sangfroid.color_hotbox1" type="string"/>
+			<preference id="pref_br_theme_color_hotbox2" name="extensions.sangfroid.color_hotbox2" type="string"/>
+			<preference id="pref_br_theme_color_hotbox3" name="extensions.sangfroid.color_hotbox3" type="string"/>
+			<!-- SC Login prefs -->
+			<preference id="pref_br_login_dest" name="extensions.sangfroid.login_dest" type="string"/>
+			<!-- hotbox customization prefs -->
+			<!-- p1 -->
+			<preference id="pref_br_hotbox_p1-r1-c1" name="extensions.sangfroid.hotbox_p1-r1-c1" type="string"/>
+			<preference id="pref_br_hotbox_p1-r1-c2" name="extensions.sangfroid.hotbox_p1-r1-c2" type="string"/>
+			<preference id="pref_br_hotbox_p1-r1-c3" name="extensions.sangfroid.hotbox_p1-r1-c3" type="string"/>
+			<preference id="pref_br_hotbox_p1-r1-c4" name="extensions.sangfroid.hotbox_p1-r1-c4" type="string"/>
+
+			<preference id="pref_br_hotbox_p1-r2-c1" name="extensions.sangfroid.hotbox_p1-r2-c1" type="string"/>
+			<preference id="pref_br_hotbox_p1-r2-c2" name="extensions.sangfroid.hotbox_p1-r2-c2" type="string"/>
+			<preference id="pref_br_hotbox_p1-r2-c3" name="extensions.sangfroid.hotbox_p1-r2-c3" type="string"/>
+			<preference id="pref_br_hotbox_p1-r2-c4" name="extensions.sangfroid.hotbox_p1-r2-c4" type="string"/>
+
+			<preference id="pref_br_hotbox_p1-r3-c1" name="extensions.sangfroid.hotbox_p1-r3-c1" type="string"/>
+			<preference id="pref_br_hotbox_p1-r3-c2" name="extensions.sangfroid.hotbox_p1-r3-c2" type="string"/>
+			<preference id="pref_br_hotbox_p1-r3-c3" name="extensions.sangfroid.hotbox_p1-r3-c3" type="string"/>
+			<preference id="pref_br_hotbox_p1-r3-c4" name="extensions.sangfroid.hotbox_p1-r3-c4" type="string"/>
+
+			<!-- p2 -->
+			<preference id="pref_br_hotbox_p2-r1-c1" name="extensions.sangfroid.hotbox_p2-r1-c1" type="string"/>
+			<preference id="pref_br_hotbox_p2-r1-c2" name="extensions.sangfroid.hotbox_p2-r1-c2" type="string"/>
+			<preference id="pref_br_hotbox_p2-r1-c3" name="extensions.sangfroid.hotbox_p2-r1-c3" type="string"/>
+			<preference id="pref_br_hotbox_p2-r1-c4" name="extensions.sangfroid.hotbox_p2-r1-c4" type="string"/>
+
+			<preference id="pref_br_hotbox_p2-r2-c1" name="extensions.sangfroid.hotbox_p2-r2-c1" type="string"/>
+			<preference id="pref_br_hotbox_p2-r2-c2" name="extensions.sangfroid.hotbox_p2-r2-c2" type="string"/>
+			<preference id="pref_br_hotbox_p2-r2-c3" name="extensions.sangfroid.hotbox_p2-r2-c3" type="string"/>
+			<preference id="pref_br_hotbox_p2-r2-c4" name="extensions.sangfroid.hotbox_p2-r2-c4" type="string"/>
+
+			<preference id="pref_br_hotbox_p2-r3-c1" name="extensions.sangfroid.hotbox_p2-r3-c1" type="string"/>
+			<preference id="pref_br_hotbox_p2-r3-c2" name="extensions.sangfroid.hotbox_p2-r3-c2" type="string"/>
+			<preference id="pref_br_hotbox_p2-r3-c3" name="extensions.sangfroid.hotbox_p2-r3-c3" type="string"/>
+			<preference id="pref_br_hotbox_p2-r3-c4" name="extensions.sangfroid.hotbox_p2-r3-c4" type="string"/>
+
+			<!-- p3 -->
+			<preference id="pref_br_hotbox_p3-r1-c1" name="extensions.sangfroid.hotbox_p3-r1-c1" type="string"/>
+			<preference id="pref_br_hotbox_p3-r1-c2" name="extensions.sangfroid.hotbox_p3-r1-c2" type="string"/>
+			<preference id="pref_br_hotbox_p3-r1-c3" name="extensions.sangfroid.hotbox_p3-r1-c3" type="string"/>
+			<preference id="pref_br_hotbox_p3-r1-c4" name="extensions.sangfroid.hotbox_p3-r1-c4" type="string"/>
+
+			<preference id="pref_br_hotbox_p3-r2-c1" name="extensions.sangfroid.hotbox_p3-r2-c1" type="string"/>
+			<preference id="pref_br_hotbox_p3-r2-c2" name="extensions.sangfroid.hotbox_p3-r2-c2" type="string"/>
+			<preference id="pref_br_hotbox_p3-r2-c3" name="extensions.sangfroid.hotbox_p3-r2-c3" type="string"/>
+			<preference id="pref_br_hotbox_p3-r2-c4" name="extensions.sangfroid.hotbox_p3-r2-c4" type="string"/>
+
+			<preference id="pref_br_hotbox_p3-r3-c1" name="extensions.sangfroid.hotbox_p3-r3-c1" type="string"/>
+			<preference id="pref_br_hotbox_p3-r3-c2" name="extensions.sangfroid.hotbox_p3-r3-c2" type="string"/>
+			<preference id="pref_br_hotbox_p3-r3-c3" name="extensions.sangfroid.hotbox_p3-r3-c3" type="string"/>
+			<preference id="pref_br_hotbox_p3-r3-c4" name="extensions.sangfroid.hotbox_p3-r3-c4" type="string"/>
+			<!-- End hotbox pref declarations -->
+
+		</preferences>
+		<tabbox class="prefs_box">
+			<tabs>
+				<tab label="General"/>
+				<!-- AH deprecating plugins customization 
+			<tab label="Plugins" oncommand="br_options.render_plugins()"/>
+		-->
+				<tab label="Hotbox"/>
+				<tab label="Theme"/>
+			</tabs>
+			<tabpanels>
+				<tabpanel id="br_general_options">
+					<hbox>
+						<vbox>
+							<columns>
+								<column flex="1"/>
+								<column flex="1"/>
+							</columns>
+							<rows>
+								<!--<row>
+				<label tooltiptext="Temporarily Deactivate">Sangfroid Enabled:</label>
+				<checkbox id="br_active" preference="pref_br_active"/>  
+            </row>-->
+								<row>
+									<label tooltiptext="For Commerce Quicklinks">Always Convert Links:</label>
+									<checkbox id="br_faster" preference="pref_br_faster"/>  
+								</row>
+								<row>
+									<label tooltiptext="For Commerce Quicklinks">Open History XML From Transaction Manager In Editor:</label>
+									<checkbox id="br_open_history_editor" preference="pref_br_open_history_editor"/>  
+								</row>
+								<row>
+									<label tooltiptext="For Commerce Quicklinks">Open Doc XML From Transaction Manager In Editor:</label>
+									<checkbox id="br_open_history_editor" preference="pref_br_open_document_editor"/>  
+								</row>
+								<row>
+									<separator/>
+								</row>
+								<row>
+									<label tooltiptext="Proxy Destination">Proxy into Superuser Destination:</label>
+									<menulist id="br_login_dest" preference="pref_br_login_dest">
+										<menupopup>
+											<menuitem value="none" label="Home Page"/>
+											<menuitem value="admin" label="Admin Page"/>
+											<menuitem value="trans" label="First Transaction Manager"/>
+										</menupopup>
+									</menulist>
+								</row>
+								<row>
+									<separator/>
+								</row>
+								<row>
+									<label>Preferred text editor:</label>
+								</row>
+								<row>
+									<textbox id="br_text_editor" preference="pref_br_text_editor" size="45"/>
+									<spacer/>
+									<button oncommand="br_options.pref_editor_select('br_text_editor',0);" label="Browse..."
+                          id="browse_edit" accesskey="e" tabindex="1" />
+								</row>
+								<row>
+									<separator/>
+								</row>
+								<!-- AH - No more remote server
+			  <row>
+                <label>URL of remote server:</label>
+              </row>
+              <row>
+                <textbox id="br_remote_repo" preference="pref_br_remote_repo" size="45"/>
+              </row>
+			  
+		<row><separator/></row>	  
+			  -->
+
+
+								<row align="center">
+									<label>Override Default Temp Folder:</label>
+								</row>
+								<row>
+									<textbox id="br_temp_dir" preference="pref_br_temp_dir" size="45"/>
+									<spacer/>
+									<button oncommand="br_options.pref_editor_select('br_temp_dir',2);" label="Browse..."
+                          id="browse_dir" accesskey="w" tabindex="1" />
+								</row>
+								<row>
+									<separator/>
+								</row>
+								<row>
+									<label>Hotbox Key Combination:</label>
+								</row>
+								<row>
+									<menulist id="br_hotbox_modifier" preference="pref_br_hotbox_modifier">
+										<menupopup>
+											<menuitem value="none" label="None"/>
+											<menuitem value="16" label="Shift"/>
+											<menuitem value="17" label="Ctrl"/>
+										</menupopup>
+									</menulist>
+									<textbox id="br_enter_hotkey" size="3"/>
+									<button label='Revert' oncommand="br_options.revert_hotbox()" style="width: 13em;"/>
+								</row>
+								<row>
+									<separator/>
+								</row>
+								<row>
+									<label>Gear Link Settings:</label>
+								</row>
+								<row>
+									<label>Turn on gears for opening attributes:</label>
+									<checkbox id="br_open_attribute" preference="pref_br_open_attribute"/>
+								</row>
+								<row>
+									<label>Gear display behavior for opening actions:</label>
+									<menulist id="br_open_action" preference="pref_br_open_action">
+										<menupopup>
+											<menuitem value="display" label="Always Display"/>
+											<menuitem value="hover" label="Hover Over"/>
+											<menuitem value="disable" label="Disable"/>
+										</menupopup>
+									</menulist>
+								</row>
+								<!--
+        <row><separator/></row>
+              <row>
+                <label>Username (for chat):</label>
+              <textbox id="br_username" preference="pref_br_username"/>  
+              </row>
+		-->
+							</rows>
+
+						</vbox>
+					</hbox>
+				</tabpanel>
+				<!-- AH deprecating plugin customization
+        <tabpanel id="br_plugins_tab">
+          <hbox>
+        <vbox>
+            <vbox>
+                  <hbox>
+                 <label>Choose custom plugins directory (Clear for Default):</label>
+               </hbox>
+               <hbox>
+                 <textbox id="br_plugin_dir" preference="pref_br_plugin_dir" size="50"/>
+                <button oncommand="br_options.pref_editor_select('br_plugin_dir',2);" label="Browse..."
+                            id="browse_plugin_dir" accesskey="p" tabindex="1" />  
+                      </hbox>
+                      <hbox>
+                          <button oncommand="br_options.revert_to_default();" label="Revert All Plugins" id="br_revert_all_button" accesskey="A"/>  
+                  </hbox>
+                  <hbox>
+                  <vbox>
+                    <hbox class="plugins_box">
+                      <vbox>
+                        <label>Active Plugins</label>
+                        <listbox id="br_plugin_active_menu" seltype="multiple">
+                        </listbox>
+                        <button oncommand="br_options.inactivate();" label="Disable Selected" id="br_inactivate_button" accesskey="D"/>
+                      </vbox>
+                      <vbox>
+                        <label>Inactive Plugins</label>
+                        <listbox id="br_plugin_inactive_menu" seltype="multiple">
+                        </listbox>
+                        <button oncommand="br_options.activate();" label="Enable Selected" id="br_activate_button" accesskey="E"/>
+                      </vbox>
+                    </hbox>
+                  <hbox>
+                    <hbox>
+                      <label>Legend: </label>
+                      <label class="br_default"> Default Plugins </label> | 
+                      <label class="br_custom">Custom Plugins</label>
+                    </hbox>
+                  </hbox>
+                  </vbox>
+                  </hbox>
+               </vbox>
+               
+             </vbox>
+          </hbox>
+        </tabpanel>
+		-->
+				<tabpanel id="br_hotbox1_tab">			
+					<vbox>
+						<label>Hotbox Customization - Changes Req. Page Refresh</label>
+						<grid>
+							<columns>
+								<column/>
+								<column/>
+								<column/>
+							</columns>
+							<rows>
+								<row>
+									<hbox>
+										<menulist id="br_hotbox_pagenum" oncommand="br_options.change_hotbox_page()">
+											<menupopup>
+												<menuitem label="Page 1" value="p1"/>
+												<menuitem label="Page 2" value="p2"/>
+												<menuitem label="Page 3" value="p3"/>
+											</menupopup>
+										</menulist>
+									</hbox>
+									<label value=" " style="width: 12em;"/>
+									<button label='Revert All Keys' oncommand="br_options.revert_customization()" style="width: 13em;"/>
+								</row>
+							</rows>
+						</grid>
+						<grid name='br_hotbox_pgrid' id='p1' >
+							<columns>
+								<column/>
+								<column/>
+								<column/>
+								<column/>
+							</columns>
+							<rows>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r1-c1_label" value=""/>
+										<label id="p1-r1-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r1-c1' preference='pref_br_hotbox_p1-r1-c1'/>
+										<button id='p1-r1-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r1-c2_label" value=""/>
+										<label id="p1-r1-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r1-c2' preference='pref_br_hotbox_p1-r1-c2'/>
+										<button id='p1-r1-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r1-c3_label" value=""/>
+										<label id="p1-r1-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r1-c3' preference='pref_br_hotbox_p1-r1-c3'/>
+										<button id='p1-r1-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r1-c4_label" value=""/>
+										<label id="p1-r1-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r1-c4' preference='pref_br_hotbox_p1-r1-c4'/>
+										<button id='p1-r1-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r2-c1_label" value=""/>
+										<label id="p1-r2-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r2-c1' preference='pref_br_hotbox_p1-r2-c1'/>
+										<button id='p1-r2-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r2-c2_label" value=""/>
+										<label id="p1-r2-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r2-c2' preference='pref_br_hotbox_p1-r2-c2'/>
+										<button id='p1-r2-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r2-c3_label" value=""/>
+										<label id="p1-r2-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r2-c3' preference='pref_br_hotbox_p1-r2-c3'/>
+										<button id='p1-r2-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r2-c4_label" value=""/>
+										<label id="p1-r2-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r2-c4' preference='pref_br_hotbox_p1-r2-c4'/>
+										<button id='p1-r2-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r3-c1_label" value=""/>
+										<label id="p1-r3-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r3-c1' preference='pref_br_hotbox_p1-r3-c1'/>
+										<button id='p1-r3-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r3-c2_label" value=""/>
+										<label id="p1-r3-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r3-c2' preference='pref_br_hotbox_p1-r3-c2'/>
+										<button id='p1-r3-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r3-c3_label" value=""/>
+										<label id="p1-r3-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r3-c3' preference='pref_br_hotbox_p1-r3-c3'/>
+										<button id='p1-r3-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p1-r3-c4_label" value=""/>
+										<label id="p1-r3-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p1-r3-c4' preference='pref_br_hotbox_p1-r3-c4'/>
+										<button id='p1-r3-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+							</rows>
+						</grid>
+						<grid name='br_hotbox_pgrid' id='p2' hidden="true">
+							<columns>
+								<column/>
+								<column/>
+								<column/>
+								<column/>
+							</columns>
+							<rows>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r1-c1_label" value=""/>
+										<label id="p2-r1-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r1-c1' preference='pref_br_hotbox_p2-r1-c1'/>
+										<button id='p2-r1-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r1-c2_label" value=""/>
+										<label id="p2-r1-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r1-c2' preference='pref_br_hotbox_p2-r1-c2'/>
+										<button id='p2-r1-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r1-c3_label" value=""/>
+										<label id="p2-r1-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r1-c3' preference='pref_br_hotbox_p2-r1-c3'/>
+										<button id='p2-r1-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r1-c4_label" value=""/>
+										<label id="p2-r1-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r1-c4' preference='pref_br_hotbox_p2-r1-c4'/>
+										<button id='p2-r1-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r2-c1_label" value=""/>
+										<label id="p2-r2-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r2-c1' preference='pref_br_hotbox_p2-r2-c1'/>
+										<button id='p2-r2-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r2-c2_label" value=""/>
+										<label id="p2-r2-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r2-c2' preference='pref_br_hotbox_p2-r2-c2'/>
+										<button id='p2-r2-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r2-c3_label" value=""/>
+										<label id="p2-r2-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r2-c3' preference='pref_br_hotbox_p2-r2-c3'/>
+										<button id='p2-r2-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r2-c4_label" value=""/>
+										<label id="p2-r2-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r2-c4' preference='pref_br_hotbox_p2-r2-c4'/>
+										<button id='p2-r2-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r3-c1_label" value=""/>
+										<label id="p2-r3-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r3-c1' preference='pref_br_hotbox_p2-r3-c1'/>
+										<button id='p2-r3-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r3-c2_label" value=""/>
+										<label id="p2-r3-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r3-c2' preference='pref_br_hotbox_p2-r3-c2'/>
+										<button id='p2-r3-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r3-c3_label" value=""/>
+										<label id="p2-r3-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r3-c3' preference='pref_br_hotbox_p2-r3-c3'/>
+										<button id='p2-r3-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p2-r3-c4_label" value=""/>
+										<label id="p2-r3-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p2-r3-c4' preference='pref_br_hotbox_p2-r3-c4'/>
+										<button id='p2-r3-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+							</rows>
+						</grid>
+						<grid name='br_hotbox_pgrid' id='p3' hidden="true">
+							<columns>
+								<column/>
+								<column/>
+								<column/>
+								<column/>
+							</columns>
+							<rows>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r1-c1_label" value=""/>
+										<label id="p3-r1-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r1-c1' preference='pref_br_hotbox_p3-r1-c1'/>
+										<button id='p3-r1-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r1-c2_label" value=""/>
+										<label id="p3-r1-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r1-c2' preference='pref_br_hotbox_p3-r1-c2'/>
+										<button id='p3-r1-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r1-c3_label" value=""/>
+										<label id="p3-r1-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r1-c3' preference='pref_br_hotbox_p3-r1-c3'/>
+										<button id='p3-r1-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r1-c4_label" value=""/>
+										<label id="p3-r1-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r1-c4' preference='pref_br_hotbox_p3-r1-c4'/>
+										<button id='p3-r1-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r2-c1_label" value=""/>
+										<label id="p3-r2-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r2-c1' preference='pref_br_hotbox_p3-r2-c1'/>
+										<button id='p3-r2-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r2-c2_label" value=""/>
+										<label id="p3-r2-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r2-c2' preference='pref_br_hotbox_p3-r2-c2'/>
+										<button id='p3-r2-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r2-c3_label" value=""/>
+										<label id="p3-r2-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r2-c3' preference='pref_br_hotbox_p3-r2-c3'/>
+										<button id='p3-r2-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r2-c4_label" value=""/>
+										<label id="p3-r2-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r2-c4' preference='pref_br_hotbox_p3-r2-c4'/>
+										<button id='p3-r2-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+								<row >
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r3-c1_label" value=""/>
+										<label id="p3-r3-c1_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r3-c1' preference='pref_br_hotbox_p3-r3-c1'/>
+										<button id='p3-r3-c1' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r3-c2_label" value=""/>
+										<label id="p3-r3-c2_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r3-c2' preference='pref_br_hotbox_p3-r3-c2'/>
+										<button id='p3-r3-c2' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r3-c3_label" value=""/>
+										<label id="p3-r3-c3_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r3-c3' preference='pref_br_hotbox_p3-r3-c3'/>
+										<button id='p3-r3-c3' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+									<vbox>
+										<textbox size="90" maxwidth="90" disabled="true" id="p3-r3-c4_label" value=""/>
+										<label id="p3-r3-c4_key" value=""/>
+										<textbox size="90" maxwidth="90" crop="end" id='p3-r3-c4' preference='pref_br_hotbox_p3-r3-c4'/>
+										<button id='p3-r3-c4' label='Customize' oncommand="br_options.open_customization(this.id)"/>
+									</vbox>
+								</row>
+							</rows>
+						</grid>
+						<hbox>
+							<!--MX-->
+							<label value="Position: " style="display:none;"/>
+							<label id="br_hotbox_customize_selected" value="Select something to edit." style="display:none;"/>
+							<label value="------------------------------Customization------------------------------"/>
+						</hbox>
+						<hbox>
+							<label value="Label:"/>
+							<textbox id="br_hotbox_customize_label" maxlength='35' value="" style="width: 22em;"/>
+						</hbox>
+						<menulist id="br_hotbox_customize_archetypes" oncommand="br_options.select_archetype()">
+							<menupopup>
+								<menuitem label="" value=""/>
+								<menuitem label="Custom Link" value="custom"/>
+								<menuitem label="Data Tables" value="data_table"/>							
+								<menuitem label="Open Error Log in Editor" value="errors_editor"/>
+								<menuitem label="Proxy Into Super User" value="proxy_in"/>
+								<menuitem label="Proxy Out -> Proxy Into Super User" value="proxy_out"/>
+								<menuitem label="Copy BS_ID(Trans. ID) to Clipboard" value="bs_id"/>
+								<menuitem label="Copy BS_ID, Go to Printer Friendlies" value="printer_friendly"/>
+								<menuitem label="Quote: View History XML" value="view_historyxml"/>
+								<menuitem label="Quote: View Document XML" value="view_documentxml"/>
+								<menuitem label="Quote: Open History XML in Editor" value="editor_historyxml"/>
+								<menuitem label="Quote: Open Document XML in Editor" value="editor_documentxml"/>
+								<menuitem label="Open Current Mapping File in Editor" value="editor_mappingfile"/>
+								<menuitem label="Commerce/Config Deployment Center" value="deployment_center"/>
+							</menupopup>
+						</menulist>
+						<hbox>
+							<label value="URL Suffix: http://examplesite.bigmachines.com/" class="br_hotbox_customize_urlgroup" hidden="true"/>
+							<textbox id="br_hotbox_customize_url" value="restofurlhere/whatever.jsp" class="br_hotbox_customize_urlgroup" hidden="true"/>
+						</hbox>
+						<hbox>	
+							<label value="Open behavior:" class="br_hotbox_customize_urlgroup" hidden="true"/>
+							<menulist id="br_hotbox_customize_tab" class="br_hotbox_customize_urlgroup" hidden="true">
+								<menupopup>
+									<menuitem label="Open in new window" value="window"/>
+									<menuitem label="Open in new tab" value="newtab"/>
+									<menuitem label="Open in current tab" value="currenttab"/>
+								</menupopup>
+							</menulist>
+						</hbox>
+						<hbox>	
+							<label value="Shortcut:"/>
+							<menulist id="br_hotbox_customize_key">
+								<menupopup>
+									<menuitem label="A" value="A"/>
+									<menuitem label="B" value="B"/>
+									<menuitem label="C" value="C"/>
+									<menuitem label="D" value="D"/>
+									<menuitem label="E" value="E"/>
+									<menuitem label="F" value="F"/>
+									<menuitem label="G" value="G"/>
+									<menuitem label="H" value="H"/>
+									<menuitem label="I" value="I"/>
+									<menuitem label="J" value="J"/>
+									<menuitem label="K" value="K"/>
+									<menuitem label="L" value="L"/>
+									<menuitem label="M" value="M"/>
+									<menuitem label="N" value="N"/>
+									<menuitem label="O" value="O"/>
+									<menuitem label="P" value="P"/>
+									<menuitem label="Q" value="Q"/>
+									<menuitem label="R" value="R"/>
+									<menuitem label="S" value="S"/>
+									<menuitem label="T" value="T"/>
+									<menuitem label="U" value="U"/>
+									<menuitem label="V" value="V"/>
+									<menuitem label="W" value="W"/>
+									<menuitem label="X" value="X"/>
+									<menuitem label="Y" value="Y"/>
+									<menuitem label="Z" value="Z"/>
+								</menupopup>
+							</menulist>
+						</hbox>
+						<grid>
+							<columns>
+								<column/>
+								<column/>
+								<column/>
+							</columns>
+							<rows>
+								<row>
+									<button label='Save' oncommand="br_options.save_customization()" style="width: 13em;"/>
+									<label value=" " style="width: 5em;"/>
+									<button label='Revert Current Key' oncommand="br_options.revert_current_customization()" style="width: 13em;"/>
+								</row>
+							</rows>
+						</grid>
+					</vbox>
+				</tabpanel>
+				<tabpanel id="br_hotbox1_tab">			
+					<vbox>
+						<hbox>
+							<label value="Main 1:"/>
+							<textbox id="br_theme_color_main1" maxlength='35' value="" style="width: 12em;" preference="pref_br_theme_color_main1"/>
+						</hbox><hbox>
+							<label value="Main 1:"/>
+							<textbox id="br_theme_color_main2" maxlength='35' value="" style="width: 12em;" preference="pref_br_theme_color_main2"/>
+						</hbox><hbox>
+							<label value="Text 1:"/>
+							<textbox id="br_theme_color_text1" maxlength='35' value="" style="width: 12em;" preference="pref_br_theme_color_text1"/>
+						</hbox><hbox>
+							<label value="Text 2:"/>
+							<textbox id="br_theme_color_text2" maxlength='35' value="" style="width: 12em;" preference="pref_br_theme_color_text2"/>
+						</hbox><hbox>
+							<label value="Text 3:"/>
+							<textbox id="br_theme_color_text3" maxlength='35' value="" style="width: 12em;" preference="pref_br_theme_color_text3"/>
+						</hbox><hbox>
+							<label value="Hotbox 1:"/>
+							<textbox id="br_theme_color_hotbox1" maxlength='35' value="" style="width: 12em;" preference="pref_br_theme_color_hotbox1"/>
+						</hbox><hbox>
+							<label value="Hotbox 2:"/>
+							<textbox id="br_theme_color_hotbox2" maxlength='35' value="" style="width: 12em;" preference="pref_br_theme_color_hotbox2"/>
+						</hbox><hbox>
+							<label value="Hotbox 3:"/>
+							<textbox id="br_theme_color_hotbox3" maxlength='35' value="" style="width: 12em;" preference="pref_br_theme_color_hotbox3"/>
+						</hbox>
+					</vbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+
+	</prefpane>
+	<script src="br_md5_lib.js"/>
+	<script src="br_utils.js"/>
+	<script src="br_init.js"/>
+	<script src="br_repo.js"/>
+	<script src="br_display.js"/>
+	<script src="modules/br_pubsub.js"/>
+	<script src="br_editor.js"/>
+	<script src="br_content.js"/>
+	<script src="ff-overlay.js"/>
+	<script src="hg_commands.js"/>
+
+	<script src="br_globals.js"/>
+	<script src="underscore-1.1.4.min.js"/>
+	<script src="br_list_of_plugins.js"/>
+	<script src="jquery-1.4.2.js"/>
+	<script src="br_options.js"/>
+	<script>br_options.window_ready();</script>
+</prefwindow>

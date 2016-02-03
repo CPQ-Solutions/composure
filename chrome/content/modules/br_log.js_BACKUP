@@ -1,0 +1,272 @@
+// br_log provides convenient logging and console services. It writes to the Firefox and Firebug 
+// consoles, as well as to a log on the server, which can be viewed at
+// [http://firefox.bigmachines.com/usage](http://firefox.bigmachines.com/usage)
+// 
+// br_log also creates and renders a popup interface to show messages to the user, and keeps track of
+// previous messages to show them if necessary.
+
+/**
+ * EXAMPLE:
+ * br_log.notify("Show popup with this message");
+ * br_log.error("Log an error, and show popup to user");
+ **/
+var br_log = br_log_constructor();
+
+function br_log_constructor(me) {
+  me = me || {};
+
+  me.console = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
+
+  me.show_timer = null;
+
+  me.notify_popup = function() {
+    var css_done = br_load.css("resource://br_templates/notify_div.css"),
+      temp_done = br_load.template("resource://br_templates/notify_div.html"),
+      fn = {};
+
+    // fn holds functions that will be called by events
+    fn.done = function() {
+      remove();
+      me.show_timer = null;
+    };
+    fn.enter = function() {
+      clearTimeout(me.show_timer);
+    };
+    fn.leave = function() {
+      me.show_timer = setTimeout(fn.done, 2000);
+    };
+    fn.close_log = function() {
+      remove();
+    };
+    fn.show_more = function() {
+      var el = doc.getElementById("br_previous_notify_div"),
+        button = doc.getElementById("br_show_more_log");
+      
+      if(!el) { return; }
+
+      if(el.style.display !== "block") {
+        el.style.display = "block";
+        button.setAttribute("class", "showing");
+      } else {
+        el.style.display = "none";
+        button.setAttribute("class", "");
+      }
+    };
+
+    // create a promise that loads up the UI
+    var ready = Q.join(temp_done, css_done, function(temp, css) {
+      if(!doc.getElementById("br_notify_css")) {
+        css.setAttribute("id", "br_notify_css");
+        var head = doc.head;
+        head = head || doc.getElementsByTagName("head")[0];
+        head.appendChild(css);
+      }
+      return {temp: temp, css: css};
+    });
+
+
+    function remove() {
+      var root_div = doc.getElementById("br_notify_root"),
+        notify_div = doc.getElementById("br_notify_div"),
+        close_div = doc.getElementById("br_close_log_div"),
+        toggle_div = doc.getElementById("br_show_more_log");
+
+			if(notify_div) {
+        notify_div.removeEventListener("mouseover", fn.enter, false);
+        notify_div.removeEventListener("mouseout", fn.leave, false);
+
+        close_div.removeEventListener("click", fn.close_log, false);
+        toggle_div.removeEventListener("click", fn.show_more, false);
+
+				root_div.parentNode.removeChild(root_div);
+        clearTimeout(me.show_timer);
+			}
+    }
+    
+
+    function setup_delay(element, delay) {
+      me.show_timer = setTimeout(fn.done, delay);
+      
+      element.addEventListener("mouseover", fn.enter, true);
+      element.addEventListener("mouseout", fn.leave, true);
+    }
+
+    function render(param, delay) {
+      delay = delay || 8000;
+      return Q.when(ready, function(result) {
+        var root_div, notify_div, close_div, toggle_div;
+        root_div = doc.createElement("div");
+        remove();
+        
+        root_div.innerHTML = result.temp(param);
+        root_div.setAttribute("id","br_notify_root");
+        doc.body.appendChild(root_div);
+
+        notify_div = doc.getElementById("br_notify_div");
+        close_div = doc.getElementById("br_close_log_div");
+        toggle_div = doc.getElementById("br_show_more_log");
+
+        close_div.addEventListener("click", fn.close_log, false);
+        toggle_div.addEventListener("click", fn.show_more, false);
+
+        notify_div.style.display="block";
+        setup_delay(notify_div, delay);
+        
+        return notify_div;
+      });
+    }
+	
+	//AH - needed to override default render
+	function render_alt(param, delay) {
+      delay = delay || 8000;
+      return Q.when(ready, function(result) {
+        var root_div, notify_div, close_div, toggle_div;
+        root_div = doc.createElement("div");
+        remove();
+        
+        root_div.innerHTML = result.temp(param);
+        root_div.setAttribute("id","br_notify_root");
+        doc.body.appendChild(root_div);
+
+        notify_div = doc.getElementById("br_notify_div");
+        close_div = doc.getElementById("br_close_log_div");
+        toggle_div = doc.getElementById("br_show_more_log");
+
+        close_div.addEventListener("click", fn.close_log, false);
+        toggle_div.addEventListener("click", fn.show_more, false);
+
+        notify_div.style.display="block";
+		//AH - no time delay
+        //setup_delay(notify_div, delay);
+		notify_div.style.position = "fixed";
+		notify_div.style.left = "15%";
+		notify_div.style.bottom = "0";
+		notify_div.style.top = "auto";
+		notify_div.style.right = "auto";
+		if(param["curr"]["level"] == "prod"){
+			notify_div.style.background = "-moz-linear-gradient(left center , #f00, #f00) repeat scroll 0 0 rgba(0, 0, 0, 0)";
+		}
+		
+        return notify_div;
+      });
+    }
+	
+    return {
+      render:render, 
+	  render_alt:render_alt,
+      remove:remove
+    };
+  };
+
+  me.log_history = function(log_array) {
+    var el = document.getElementById("sangfroid_overlay"),
+      log_text;
+
+    if(!el) {return [];}
+
+    if(_.isArray(log_array)) {
+      log_text = JSON.stringify(log_array);
+      el.setAttribute("log", log_text);
+      return log_array;
+    } else {
+      log_text = el.getAttribute("log");
+      return log_text ? JSON.parse(log_text) : [];
+    }
+  };
+
+  me.display_message = function(message, level) {
+    var widget = me.notify_popup();
+    
+    level = level || "";
+    message = message || "";
+    message = message.replace(/\n/g, "<br/>");
+
+    var curr = {text:message, level: level};
+    
+    var g = br_global;
+    log_array = me.log_history();
+    
+    var param = {curr: curr, prev: log_array.slice(0)};
+
+    // prepend current to the log array, and limit to 15 entries
+    log_array.splice(0,0,curr);
+    me.log_history(log_array.splice(0,15));
+
+    widget.render(param);
+  };
+
+  function error(message) {
+    notify(message, "error");
+    server("COMPOSURE_ERROR: "+message);
+
+    var script_error = Components.classes["@mozilla.org/scripterror;1"].createInstance(Components.interfaces.nsIScriptError);
+    script_error.init(message, message.fileName, null, message.lineNumber, null, script_error.errorFlag, null);
+
+    me.console.logMessage(script_error);
+  }
+
+  function info(message) {
+    me.console.logStringMessage("Composure: " + message);
+  }
+
+  function notify(message, level) {
+    level = level || "";
+    me.display_message(message, level);
+  }
+  
+  //AH long message
+  function long_message(message,level){
+	var widget = me.notify_popup();
+    level = level || "";
+    message = message || "";
+    message = message.replace(/\n/g, "<br/>");
+
+    var curr = {text:message, level: level};
+    
+    var g = br_global;
+    log_array = me.log_history();
+    
+    var param = {curr: curr, prev: log_array.slice(0)};
+
+    // prepend current to the log array, and limit to 15 entries
+    log_array.splice(0,0,curr);
+    me.log_history(log_array.splice(0,15));
+	
+    var div_done = widget.render_alt(param);
+  }
+
+  function server(message) {
+    if(message === undefined || message === null) {return;}
+    if(!br_load || typeof br_load.get !== "function") {return;}
+    if(br_global.dev_mode === true) {
+      message = "DEV_MODE:::" + message;
+    }
+
+    var url = br_utils.url_object(br_global.remote_root);
+    
+    message = message.replace(/\./g, "_");
+    if(url && url.path()) {
+      br_load.get(url.append("/log/"+message));
+    }
+  }
+
+  function firebug(message) {
+    if(typeof Firebug !== "undefined" && 
+        Firebug.Console && 
+        typeof Firebug.Console.log === "function") {
+      Firebug.Console.log(message);
+    } else {
+      info(message);
+    }
+  }
+  return {
+    error: function(message) {error(message);}, 
+    info: function(message) {info(message);}, 
+    warn: function(message) {notify(message, "warn"); info("WARNING: "+message);}, 
+    server: function(message) {server(message);},
+    notify: function(message) {notify(message);},
+	//AH - exposing new function
+	long_message: function(message,level) {long_message(message,level);},
+    firebug: function(message) {firebug(message);}
+  }
+};

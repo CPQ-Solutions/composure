@@ -1,0 +1,149 @@
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+#hotbox-panel-transparent {
+	-moz-appearance: none;
+  	background-color: transparent;
+  	border-width: 0px;
+}
+#sangfroid_nav_button {
+	list-style-image: url(chrome://sangfroid/content/img/logo.png);
+}
+#hotbox-panel {
+  padding: 0px;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+}
+#hotbox-frame {
+  	border-width: 0px;
+	width: 600px;
+  height: 600px;
+}
+#br-hotbox {
+  	border-width: 0px;
+  	width: 100%;
+  height: 100%;
+}
+
+#option-panel-transparent {
+	-moz-appearance: none;
+  	background-color: transparent;
+  	border-width: 0px;
+}
+#br-option-panel {
+  padding: 0px;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+}
+#br-option-frame {
+  	border-width: 0px;
+	width: 600px;
+  height: 600px;
+}
+
+}
+
+.prefs_box {
+	height: 500px;
+}
+.prefs_box tabpanel {
+	height: 500px;
+	overflow: auto;
+}
+
+.prefs_box tabpanel listbox {
+	height: 300px;
+}
+
+.br_default {
+	color:blue;
+}
+.br_custom {
+	color: red;
+}
+
+#sangfroid_splitter {
+	display: none;
+}
+#sangfroid_overlay {
+	display:none;
+	padding: 2px;
+ 	margin: 0px;
+ 	/*background: rgba(0%, 0%, 0%, 0.8);*/
+	background: #313b44;  
+ 	border: 1px solid #093161;
+}
+#rails_div{
+}
+#sangfroid_loaded{
+	display:none;
+}
+#rails_header {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	width:100%;
+	color: white;
+	font-weight: bold;
+	-moz-box-align: stretch;
+}
+#rails_left {
+	width: 50%;
+	-moz-box-pack: left;
+}
+#rails_right {
+	width: 50%;
+	-moz-box-pack: right;
+}
+#rails_field {
+	font-weight: normal;
+	color: #444;
+}
+#rails_back {
+	list-style-image: url(chrome://sangfroid/content/img/go-previous.png);
+}
+#rails_logo {
+	list-style-image: url(chrome://sangfroid/content/img/logo.png);
+}
+#rails_forward {
+	list-style-image: url(chrome://sangfroid/content/img/go-next.png);
+}
+.rails_close{
+	list-style-image: url(chrome://sangfroid/content/img/exit.png);
+}
+#rails_iframe {
+	height: 100%;
+}
+#sangfroid_context_menu
+{
+  color: red ! important;
+}
+#sangfroid-toolbar-button
+{
+  list-style-image: url("chrome://sangfroid/skin/toolbar-button.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+#sangfroid-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 24px 48px  0px);
+}
+[iconsize="small"] #sangfroid-toolbar-button
+{
+  -moz-image-region: rect( 0px 40px 16px 24px);
+}
+[iconsize="small"] #sangfroid-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 40px 40px 24px);
+}
+
+#p1 rows row vbox textbox:nth-last-of-type(1)
+{
+    display:none;
+}
+#p2 rows row vbox textbox:nth-last-of-type(1)
+{
+    display:none;
+}
+#p3 rows row vbox textbox:nth-last-of-type(1)
+{
+    display:none;
+}

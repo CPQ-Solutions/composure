@@ -1,0 +1,8 @@
+<!ENTITY big_repo.label "Your localized menuitem">
+<!ENTITY big_repoContext.label "Your Menuitem">
+<!ENTITY big_repoContext.accesskey "Y">
+<!ENTITY big_repoToolbarButton.label "Your Toolbar Button">
+<!ENTITY big_repoToolbarButton.tooltip "This is your toolbar button!">
+<!ENTITY big_repoSidebar.label "Your Sidebar">
+<!ENTITY big_repoToolbar.name  "example">
+<!ENTITY big_repoToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &big_repoToolbar.name;">

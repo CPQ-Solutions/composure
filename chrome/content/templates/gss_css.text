@@ -1,0 +1,94 @@
+#br-gss-root {
+  
+}
+.br-result-details, .no_results, .gss-global{
+display:none;
+}
+.no_results{
+font-weight: bold;
+font-size: 30pt;
+float: none;
+}
+.br-text-script{
+border-top: dashed 2px #000000;
+}
+.commerce-section-results, .printer-friendly-section-results, .doc-engine-section-results, .config-section-results, .util-section-results, .orphaned-section-results,  .header-footer-section-results, .global-functions-section-results, .integration-section-results, .account-integration-section-results, .parts-integration-section-results, .file-manager-section-results{
+display:none;
+background-color: #ffffff;
+padding-left: 2em;
+}
+.commerce-all-section, .printer-friendly-all-section, .doc-engine-all-section, .config-all-section, .util-all-section, .orphaned-all-section,  .header-footer-all-section, .global-functions-all-section, .integration-all-section, .account-integration-all-section, .parts-integration-all-section, .file-manager-all-section{
+background-color: #888888 ;
+display:none;
+}
+.br-minimize-button{
+display:none;
+}
+.minimize-section, .min-all, .min-all-complete{
+display:none;
+}
+.br-minimize-button, .br-maximize-button{
+float: left;
+cursor: pointer;
+color: #CCFF00;
+}
+.max-all-complete, .min-all-complete, .minimize-section, .maximize-section, .max-all, .min-all{
+float: left;
+cursor: pointer;
+color: #FF0000;
+}
+.br-title{
+background-color: #142F9E;
+color: white;
+}
+.commerce-all-section, .printer-friendly-all-section, .doc-engine-all-section, .config-all-section, .util-all-section, .orphaned-all-section,  .header-footer-all-section, .global-functions-all-section, .integration-all-section, .account-integration-all-section, .parts-integration-all-section, .file-manager-all-section{
+font-weight: bold;
+font-size: 10pt;
+float: none;
+border-style: inset;
+}
+.br-results, .commerce-number-of-results, .printer-friendly-number-of-results, .doc-engine-number-of-results, .config-number-of-results, .util-number-of-results, .orphaned-number-of-results, .header-footer-number-of-results, .global-functions-number-of-results, .integration-number-of-results, .account-integration-number-of-results, .parts-integration-number-of-results, .file-manager-number-of-results{
+font-weight: normal;
+font-size: 8pt;
+}
+.br-title{
+	border: outset 3px #434343;
+}
+.br-text, .br-link{
+	border: outset 3px #434343;
+	border-top-style: none;
+}
+.br-line-numbers{
+	border: outset 3px #434343;
+	border-top-style: none;
+	border-bottom-style: none;
+}
+.overlay {
+    background-color: #000000;
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1000;
+	display: none;
+}
+.message { 
+	background-color: #FFFFFF;
+    border: 1px solid #000000;
+    height: 100px;
+    left: 40%;
+    position: absolute;
+    top: 35%;
+    width: 150px;
+    z-index: 1000;
+	display: none;
+}
+.gif {
+	left: 45%;
+    position: absolute;
+    top: 40%;
+    z-index: 1000;
+	display: none;
+}

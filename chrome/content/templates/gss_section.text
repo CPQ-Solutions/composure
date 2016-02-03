@@ -1,0 +1,27 @@
+<div class="br-gss-section collapsed" id="<%= id %>">
+	<div class="br-results">
+		<% for(var i=0, ii = results.length; i < ii; i++) { %>
+		<br/>
+		<div class="br-result">
+			<div class="br-title">   
+				<div class="br-maximize-button">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+				<div class="br-minimize-button">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+				&nbsp;&nbsp;<%= results[i].title %>   
+			</div>
+			<div class="br-link">
+				<a href="<%= results[i].link ? results[i].link : "" %>"><%= results[i].link ? results[i].link : "" %></a>
+			</div>
+			<div class="br-result-details">
+				<div class="br-line-numbers">
+					Line Numbers: <%= results[i].line_numbers %>
+				</div>
+				<div class="br-text">File Text: </br>
+					<div class="br-text-script">
+						<%= results[i].text ? results[i].text : "" %>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% } %>
+	</div>
+</div>

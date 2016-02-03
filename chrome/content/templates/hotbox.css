@@ -1,0 +1,340 @@
+/* Added Cleafix */
+
+#hotbox-wrapper .clear{ clear:both; display:block; overflow:hidden; visibility:hidden; width:0; height:0; font-size: 0; }
+#hotbox-wrapper .clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+
+#hotbox-wrapper .small {
+	font-size: .7em;
+	line-height: .7em;
+	text-decoration: none;
+}
+
+#hotbox-wrapper #cont {
+Xposition:absolute;
+background:color_main1;
+Xtop:50px;
+margin-top:100px;
+border:1px solid #999;
+}
+
+/*.hotbox-iframe-div {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+#br-hotbox-iframe {
+	border-style: none;
+	width: 100%;
+	height: 95%;
+	overflow: visible;
+}*/
+
+#hotbox-wrapper #colmn {
+background:color_main1;
+float:left;
+width:553px;
+padding:20px;
+}
+
+#hotbox-wrapper #colcon {
+background:color_main1;
+float:right;
+width:327px;
+padding:20px;
+}
+
+#hotbox-wrapper #ftr {
+background:color_main1;
+clear:both;
+padding:20px;
+}
+
+#darken {  
+position:fixed;  
+top:0;  
+left:0;  
+width:100%;  
+height:100%;  
+z-index:40000;  
+/*background: #313b44;
+background: rgba(0,0,0,.5);*/
+filter:alpha(opacity=90); /* Transparency in IE */  /*Do we need this?*/
+text-align: center;
+padding-top: 170px;
+color: color_text2;
+}  
+
+
+#hotbox-wrapper .hotbox-arrows a {
+	float: left;
+	margin: 12px 0 0 0;
+}
+#hotbox-wrapper .hotbox-arrows a span{
+		height: 25px;
+		width: 25px;
+		float: right;
+		background: url(resource://br_images/arrows.png);
+		margin: -15px 5px 0 5px;
+}
+
+/*.br-go-previous, .br-go-next {
+	margin: 0 0px 0 0;
+}*/
+
+#hotbox-wrapper .hotbox-arrows .br-go-next span {
+	background-position: 0 -25px;
+	float: left; }
+#hotbox-wrapper .hotbox-arrows a span:hover { background-position: -25px 0 ; }
+#hotbox-wrapper .hotbox-arrows .br-go-next span:hover { background-position: -25px -25px; }
+
+#hotbox-wrapper .hotbox-arrows .br-exit {
+	height: 25px;
+	width: 25px;
+	background: url(resource://br_images/x.png);
+	margin: -6px -16px 0 24px;
+}
+
+#hotbox-wrapper .hotbox-arrows .br-exit:hover {
+	background-color: rgba(255,255,255,.15);
+}
+#hotbox-wrapper .hotbox-arrows .br-exit:active {
+	background-color: rgba(255,255,255,.25);
+}
+
+
+#hotbox-wrapper {
+	color: color_text1;
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	font-size: 13px;
+	line-height:17px;
+	width: 962px;
+}
+
+#hotbox-wrapper .hotbox_link {
+	border: 0px;
+}
+#hotbox-wrapper img {
+	border: 0px;
+}
+#hotbox-wrapper .hotbox_keycode {
+font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	font-size: 30px; 
+	color:	color_text2;
+	line-height: 15px; 
+	margin-bottom: 30px; 
+	margin-top:10px;
+	padding-top: 25px;
+}
+#hotbox-wrapper .hotbox_desc {
+font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	width: 150px; 
+	height: 25px; 
+	line-height: 25px; 
+	font-size: 14px; 
+	text-decoration: none;
+}
+#hotbox-wrapper .hotbox-header {
+	text-align: center;
+}
+
+#hotbox-wrapper .hotbox-shift {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	float: right;
+	width: 25%;
+	text-align: left;
+}
+#hotbox-wrapper .hotbox-ctrl {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	float: right;
+	width: 25%;
+	text-align: right;
+}
+#hotbox-wrapper .hotbox-arrows {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	float: right;
+	text-align: center;
+}
+#hotbox-wrapper .br-exit {
+	margin-left: 20px;
+}
+
+#hotbox-wrapper .hotbox-curr {
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+	float: left;
+	width: 60%;
+	text-align: left;
+}
+
+#hotbox-wrapper h2.hotbox-curr { 
+color: color_text3;
+font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+font-size: 20px; 
+line-height: 30px;
+height: 30px; 
+margin: 0 0 10px 0;
+}
+
+#hotbox-wrapper h2.hotbox-curr span{ 
+	font-size: 16px;
+	font-weight: normal;
+	margin-left: 10px;
+	color: color_text1;
+}
+#hotbox-wrapper h2.hotbox-curr span em {
+	font-style: normal ; 
+	padding: 0 3px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#hotbox_wrapper a {
+/*color:#a6ba00;*/
+color: color_text1;
+}
+
+#hotbox_wrapper p { 
+padding-bottom:10px;
+padding-top:10px;
+}
+
+#hotbox_wrapper h2 { 
+font-family: Georgia,serif;
+font-size: 30px; 
+font-style:italic;
+color:	color_text1 !important;
+line-height: 15px; 
+margin-bottom: 30px; 
+margin-top:0px;
+}
+
+
+#hotbox-wrapper .centered-panel {
+position: absolute;
+top:20px;
+width: auto;
+left: 50%;
+height: 575px;
+margin-left: -375px;
+}
+
+#hotbox-wrapper .hotbox-panel-big {
+	width: 95%;
+	margin: 0px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 200%;
+}
+
+#hotbox-wrapper .indicator {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 710px;	
+}
+
+#hotbox-wrapper .indicator span {
+	float: left;
+	height: 5px;
+	width: 33%;
+	background: rgba(255,255,255,.2 );
+}
+
+#hotbox-wrapper .indicator span.active {
+	background: rgba(255,255,255,.6);
+}
+
+#hotbox-wrapper .hotbox-panel {
+padding: 15px 25px 4px 25px;
+color: color_text2;
+background: color_hotbox1;
+opacity:.95;
+
+background-clip: padding-box;
+-moz-background-clip: padding-box;
+
+border: 10px solid;
+border-color: rgba(255,255,255,.85) ;
+border-radius: 15px;
+-moz-border-radius: 15px;
+
+z-index: 40001;
+-webkit-box-shadow: 5px 5px 30px rgba(0,0,0,.5);
+-moz-box-shadow: 5px 5px 30px rgba(0,0,0,.5);
+}
+
+#hotbox-wrapper .hotbox-panel a {
+	color: color_text3;
+}
+
+#hotbox-wrapper #hotbox-panel-1 {
+	display:block;
+}
+#hotbox-wrapper #hotbox-panel-2 {
+	display:none;
+}
+#hotbox-wrapper #hotbox-panel-3 {
+	display:none;	
+}
+#hotbox-wrapper .hotbox-row { clear: both; margin: 15px 0 0 0; padding: 0 0 15px 0; border-bottom: #ccc solid 1px; display: block; width: 100%; }
+
+#hotbox-wrapper .hotbox-link { 
+	font-family: Georgia,serif;
+	width: 148px; 
+	height: 148px; 
+	border: rgba(186,223,255,.5) solid 1px;  
+	background: color_hotbox1;
+	opacity:.85
+	float: left; 
+	margin-right: 15px;
+	color: color_text1; 
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	
+
+}
+/*AH - insure hotbox size */
+#hotbox-wrapper .placeholder { 
+	cursor:default;
+	font-family: Georgia,serif;
+	width: 148px; 
+	height: 148px; 
+	/*border: rgba(186,223,255,.5) solid 1px; */
+	background: color_hotbox2; 
+	opacity:.85;
+	float: left; 
+	margin-right: 15px;
+	color: color_text1; 
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	
+}
+#hotbox-wrapper .hotbox-link:hover {
+	cursor:pointer;
+	border: rgba(186,223,255,.5) solid 1px;  
+	background: color_hotbox3; 
+}
+#hotbox-wrapper .hotbox-link:last-child {
+	margin-right: 0;
+}
+
+#hotbox-wrapper .hotbox-link a {
+	color: color_text1;
+}
+
+#hotbox-wrapper .hotbox-link img { border: none; }
+#hotbox-wrapper .hotbox-link span { width: 150px; height: 25px; line-height: 25px; font-size: 14px; text-decoration: none; }
+
+#hotbox-wrapper .last { margin-right: 0; }
+
+#hotbox-wrapper .last-row { border-width: 0; margin-bottom: 0; }

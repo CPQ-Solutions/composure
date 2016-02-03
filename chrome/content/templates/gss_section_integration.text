@@ -1,0 +1,25 @@
+<div class="br-gss-section collapsed" id="<%= id %>">
+	<div class="br-results">
+		<% for(var i=0, ii = results.length; i < ii; i++) { %>
+		<br/>
+		<div class="br-result">
+			<div class="br-title">   
+				<div class="br-maximize-button">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+				<div class="br-minimize-button">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+				&nbsp;&nbsp;<%= results[i].title %>   
+			</div>
+			<div class="br-link">
+				<a href="<%= results[i].link ? results[i].link : "" %>"><%= results[i].link ? results[i].link : "" %></a>
+			</div>
+			<div class="br-result-details">
+				<div class="br-line-numbers">
+					Variable Name: <%= results[i].var_name %>
+				</div>
+				<div class="br-text">Page Condition: </br>
+					<%= results[i].page_condition ? results[i].page_condition : "" %>
+				</div>
+			</div>
+		</div>
+	<% } %>
+	</div>
+</div>

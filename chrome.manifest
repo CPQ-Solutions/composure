@@ -1,0 +1,10 @@
+content   sangfroid                 chrome/content/	contentaccessible=yes
+skin      sangfroid   classic/1.0   chrome/skin/
+locale    sangfroid   en-US         chrome/locale/en-US/
+resource  sangfroid  ./ 
+resource	br_modules		chrome/content/modules/
+resource  br_plugins   chrome/content/content_types/
+resource  br_templates   chrome/content/templates/
+resource  br_images					chrome/content/img/
+
+overlay   chrome://browser/content/browser.xul   chrome://sangfroid/content/sangfroid.xul

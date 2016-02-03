@@ -1,0 +1,97 @@
+<div class="gss-global">
+	<div class="gss-title">Global Script Search</div>
+	<div class="all-master-functions"><div class="max-all-complete">Maximize-All</div><div class="min-all-complete">Minimize-All</div></div>
+	<br/>
+	<div class="commerce-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Commerce:</div><div class="commerce-number-of-results">Number of Results [0]</div>
+		<div class="commerce-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+	<div class="config-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Config:</div><div class="config-number-of-results">Number of Results [0]</div>
+		<div class="config-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+	<div class="util-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Util:</div><div class="util-number-of-results">Number of Results [0]</div> 
+		<div class="util-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+	<div class="orphaned-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Miscellaneous & Orphaned Records:</div><div class="orphaned-number-of-results">Number of Results [0]</div> 
+		<div class="orphaned-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+	<div class="header-footer-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Header & Footer:</div><div class="header-footer-number-of-results">Number of Results [0]</div> 
+		<div class="header-footer-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+    <div class="file-manager-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">File Manager:</div><div class="file-manager-number-of-results">Number of Results [0]</div> 
+		<div class="file-manager-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+	<div class="printer-friendly-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Printer Friendly XSLs:</div><div class="printer-friendly-number-of-results">Number of Results [0]</div> 
+		<div class="printer-friendly-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>	
+	<br/>
+	<div class="doc-engine-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Doc Engine XSLs:</div><div class="doc-engine-number-of-results">Number of Results [0]</div> 
+		<div class="doc-engine-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+    <div class="integration-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Integrations:</div><div class="integration-number-of-results">Number of Results [0]</div> 
+		<div class="integration-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+    <div class="parts-integration-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Parts Integrations:</div><div class="parts-integration-number-of-results">Number of Results [0]</div> 
+		<div class="parts-integration-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+	<div class="account-integration-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Account Integration:</div><div class="account-integration-number-of-results">Number of Results [0]</div> 
+		<div class="account-integration-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<br/>
+	<div class="global-functions-all-section">
+		<div class="maximize-section">&nbsp;&nbsp;Max&nbsp;&nbsp;</div>
+		<div class="minimize-section">&nbsp;&nbsp;Min&nbsp;&nbsp;</div>
+		<div class="section-title">Global Functions:</div><div class="global-functions-number-of-results">Number of Results [0]</div> 
+		<div class="global-functions-section-results"><div class="master-functions"><div class="max-all">Maximize-All</div><div class="min-all">Minimize-All</div></div><br/></div>
+	</div>
+	<div class=no_results>No Results</div>
+</div>
+<div class="overlay">
+</div>
+<div class="message">
+	<b>&nbsp;&nbsp;&nbsp;Processing... Please Wait.</b>
+</div>
+<div class="gif">
+	<img src="/img/spinner_progress.gif">
+</gif>

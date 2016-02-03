@@ -1,0 +1,107 @@
+#br_notify_root #br_notify_div{
+	color: color_text1;
+	-moz-transition: all .5s ease-out;
+	position: fixed;
+	top:0%;
+	right:0%;
+	background: #ddd;
+	background: -moz-linear-gradient(left, color_main1, color_main2);
+	opacity: 0.8;
+	box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.7);
+	-moz-border-radius-bottomleft: 7px;
+	border: 1px solid #093161;
+	border-top: 0px;
+	border-right: 0px;
+	padding: 3px;
+	margin: auto;
+	z-index: 90001;
+	display: none;
+	width: 300px;
+	overflow-x: auto;
+	font-family: "Trebuchet MS", Calibri, Helvetica, Arial, sans-serif;
+	font-size: 10px;
+}
+
+#br_notifypage_root .prod, #br_notifypage_root>#br_notifypage_div.prod{
+	background: -moz-linear-gradient(left, #F00, #F00);
+	color: white;
+	font-weight:bold;
+}
+
+#br_notifypage_root #br_notifypage_div{
+	color: color_text1;
+	-moz-transition: all .5s ease-out;
+	position: fixed;
+	left:15%;
+	bottom:0px;
+	top:auto;
+	right:auto;
+	background: #ddd;
+	background: -moz-linear-gradient(left, color_main1, color_main2);
+	opacity: 0.8;
+	box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.7);
+	-moz-border-radius-bottomleft: 7px;
+	border: 1px solid #093161;
+	border-top: 0px;
+	border-right: 0px;
+	padding: 3px;
+	margin: auto;
+	z-index: 90001;
+	display: block;
+	width: auto;
+	overflow-x: auto;
+	font-family: "Trebuchet MS", Calibri, Helvetica, Arial, sans-serif;
+	font-size: 10px;
+}
+
+#br_notify_root {
+  margin: 0px;
+  padding: 0px;
+}
+#br_notify_root #br_notify_div:hover, #br_notifypage_root #br_notifypage_div:hover{
+	opacity: 1.0;
+}
+#br_notify_title {
+  font-size: 8px;
+}
+#br_log_contents {
+  width: 244px;
+  float:left;
+}
+#br_log_pagecontents {
+  width: auto;
+  float:left;
+}
+#br_close_log_div, #br_pageclose_log_div {
+	float: right;
+}
+
+#br_notify_div .error {
+	color: red;
+}
+/*
+#br_notifypage_div .prod {
+	color: white;
+	font-weight:bold;
+}
+*/
+#br_notify_div .warn {
+	color: #D95F0E;
+}
+
+#br_current_notify_div {
+	padding-left: 5px;
+}
+#br_previous_notify_div {
+	display:none;
+	padding-left: 5px;
+}
+#br_notify_div #br_show_more_log {
+  background: url(resource://br_images/logo.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  float:left;
+}
+#br_notify_div #br_show_more_log.showing {
+  background: url(resource://br_images/shrink.png) no-repeat;
+}
